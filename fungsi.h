@@ -1,19 +1,18 @@
 // ==========================================
 // Tugas 1 - Struktur Data dan Algoritma
 // File: fungsi.h
-// Deskripsi: Header untuk deklarasi fungsi linked list
 // ==========================================
 
 #ifndef FUNGSI_H
 #define FUNGSI_H
 
-// struct utama (dipakai semua soal)
+// struct utama (jangan diubah)
 struct Node {
     int nilai;
     struct Node *next;
 };
 
-// deklarasi fungsi soal 1 - 10
+// ====== PROTOTYPE FUNGSI ======
 
 // Soal 1
 struct Node* gabungList(struct Node** list, int ukuranList);
