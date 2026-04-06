@@ -3,7 +3,7 @@
 ## Anggota Kelompok
 
 * Nama: 
-* Nama:
+* Nama: Shifa Azzuhura (250810701100088) (Nomor 3 & 4 )
 * Nama:
 * Nama: Aulia Faradina (250810701100019) (Nomor 6 & 8)
 * Nama:
@@ -70,45 +70,40 @@ Program ini dibuat untuk menyelesaikan 10 permasalahan yang berkaitan dengan str
 
 ## Soal 3 - Hapus Duplikasi
 
-**Penjelasan:**
+Penjelasan: Fungsi ini bertujuan untuk menghapus semua node yang memiliki nilai duplikat pada sebuah linked list yang sudah terurut (sorted), sehingga setiap nilai hanya muncul satu kali.
 
-## **Cara Kerja:**
+Cara Kerja:
+- Melakukan pengecekan apakah list kosong atau tidak.
+- Menggunakan pointer bantuan bernama jalan untuk menelusuri list dari awal.
+- Membandingkan nilai node saat ini dengan nilai node berikutnya.
+- Jika nilainya sama, node berikutnya ditandai untuk dihapus dan sambungan list dialihkan ke node setelahnya.
+- Jika nilainya berbeda, pointer jalan maju ke node berikutnya.
 
-*
-*
+Contoh Input:
+head = [1, 1, 2, 3, 3]
 
-**Contoh Input:**
+Output:
+[1, 2, 3]
 
-```
-```
-
-**Output:**
-
-```
-```
-
----
 
 ## Soal 4 - Hapus Node dari Akhir
 
-**Penjelasan:**
+Penjelasan:Fungsi ini menghapus node pada posisi ke-n yang dihitung dari urutan paling belakang dalam sebuah linked list.
 
-## **Cara Kerja:**
+Cara Kerja:
+- Membuat sebuah dummy node di depan head untuk menangani kasus jika node yang dihapus adalah head itu sendiri.
+- Menggunakan dua pointer, yaitu p1 dan p2.
+- Memajukan pointer p1 terlebih dahulu sebanyak n langkah agar terdapat jarak antara p1 dan p2.
+- Menggerakkan kedua pointer secara bersamaan satu per satu hingga p1 mencapai node terakhir.
+- Setelah berhenti, p2 akan berada tepat di sebelum node target. Node target kemudian diputus sambungannya dan dihapus dari memori.
 
-*
-*
+Contoh Input:
+head = [1, 2, 3, 4, 5], n = 2
 
-**Contoh Input:**
+Output:
+[1, 2, 3, 5]
 
-```
-```
 
-**Output:**
-
-```
-```
-
----
 
 ## Soal 5 - Ganjil Genap List
 
