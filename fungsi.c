@@ -78,7 +78,7 @@ struct Node* ganjilGenapList(struct Node* head) {
 // ================= SOAL 6 =================
 int apaPalindrom(struct Node* head) {
     // simpan nilai ke array dulu
-    int arr[1000]; // cukup aman untuk batas soal
+    int* arr = malloc(sizeof(int) * 100000); // cukup aman untuk batas soal
     int i = 0;
 
     struct Node* curr = head;
