@@ -3,7 +3,7 @@
 ## Anggota Kelompok
 
 * Nama: 
-* Nama:
+* Nama:Shifa Azzuhura (250810701100088) (Nomor 3 & 4 )
 * Nama:
 * Nama: Aulia Faradina (250810701100019) (Nomor 6 & 8)
 * Nama:
@@ -71,20 +71,26 @@ Program ini dibuat untuk menyelesaikan 10 permasalahan yang berkaitan dengan str
 ## Soal 3 - Hapus Duplikasi
 
 **Penjelasan:**
+Fungsi ini bertujuan untuk menghapus semua node yang memiliki nilai duplikat pada sebuah linked list yang sudah terurut (sorted), sehingga setiap nilai hanya muncul satu kali.
 
 ## **Cara Kerja:**
 
-*
-*
+* Melakukan pengecekan apakah list kosong atau tidak.
+* Menggunakan pointer bantuan bernama jalan untuk menelusuri list dari awal.
+* Membandingkan nilai node saat ini dengan nilai node berikutnya.
+* Jika nilainya sama, node berikutnya ditandai untuk dihapus dan sambungan list dialihkan ke node setelahnya.
+* Jika nilainya berbeda, pointer jalan maju ke node berikutnya.
 
 **Contoh Input:**
 
 ```
+head = [1, 1, 2, 3, 3]
 ```
 
 **Output:**
 
 ```
+[1, 2, 3]
 ```
 
 ---
@@ -92,20 +98,26 @@ Program ini dibuat untuk menyelesaikan 10 permasalahan yang berkaitan dengan str
 ## Soal 4 - Hapus Node dari Akhir
 
 **Penjelasan:**
+Penjelasan:Fungsi ini menghapus node pada posisi ke-n yang dihitung dari urutan paling belakang dalam sebuah linked list. 
 
 ## **Cara Kerja:**
 
-*
-*
+* Melakukan pengecekan apakah list kosong atau tidak.
+* Menggunakan pointer bantuan bernama jalan untuk menelusuri list dari awal.
+* Membandingkan nilai node saat ini dengan nilai node berikutnya.
+* Jika nilainya sama, node berikutnya ditandai untuk dihapus dan sambungan list dialihkan ke node setelahnya.
+* Jika nilainya berbeda, pointer jalan maju ke node berikutnya.
 
 **Contoh Input:**
 
 ```
+head = [1, 1, 2, 3, 3]
 ```
 
 **Output:**
 
 ```
+[1, 2, 3]
 ```
 
 ---
