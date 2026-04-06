@@ -2,11 +2,11 @@
 
 ## Anggota Kelompok
 
-* Nama: 
+* Nama: Nabil Aulia Dika (250810701100090) (Nomor 1 & 2)
 * Nama: Shifa Azzuhura (250810701100088) (Nomor 3 & 4 )
-* Nama: Annisa Azzuhra Maghfirah (250810701100045) (5 & 7)
+* Nama: Annisa Azzuhra Maghfirah (250810701100045) (Nomor 5 & 7)
 * Nama: Aulia Faradina (250810701100019) (Nomor 6 & 8)
-* Nama:
+* Nama: Junita Dwi Rahayu (250810701100076) (Nomor 9 & 10)
 
 ## Cara Compile
 
