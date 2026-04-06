@@ -26,23 +26,25 @@ Program ini dibuat untuk menyelesaikan 10 permasalahan yang berkaitan dengan str
 ## Soal 1 - Gabung Linked List
 
 **Penjelasan:**
-(Tulis penjelasan singkat, misalnya tujuan fungsi dan apa yang dilakukan)
+Menggabungkan dua linked list menjadi satu linked list baru secara berurutan.
 
 ## **Cara Kerja:**
 
-*
-*
+* Mengecek apakah salah satu list kosong.
+* Menambahkan node list kedua ke akhir list pertama.
+* Menjaga agar urutan node tetap sama.
 
 **Contoh Input:**
 
 ```
-(Tulis contoh input)
+list1 = [1, 2, 3]
+list2 = [4, 5]
 ```
 
 **Output:**
 
 ```
-(Tulis hasil output)
+[1, 2, 3, 4, 5]
 ```
 
 ---
@@ -50,20 +52,24 @@ Program ini dibuat untuk menyelesaikan 10 permasalahan yang berkaitan dengan str
 ## Soal 2 - Partisi List
 
 **Penjelasan:**
+Membagi linked list menjadi dua bagian berdasarkan nilai pivot. Node dengan nilai < pivot dipindahkan ke list kiri, ≥ pivot ke list kanan.
 
 ## **Cara Kerja:**
 
-*
-*
+* Membuat dua list baru (kiri dan kanan).
+* Menelusuri setiap node dan menambahkannya ke list yang sesuai.
+* Menggabungkan kedua list hasil partisi.
 
 **Contoh Input:**
 
 ```
+head = [1, 4, 3, 2, 5, 2], pivot = 3
 ```
 
 **Output:**
 
 ```
+[1, 2, 2, 4, 3, 5]
 ```
 
 ---
@@ -125,20 +131,26 @@ head = [1, 1, 2, 3, 3]
 ## Soal 5 - Ganjil Genap List
 
 **Penjelasan:**
+Program ini digunakan untuk mengelompokkan node pada linked list berdasarkan nilai ganjil dan genap. Node dengan nilai ganjil akan ditempatkan di bagian depan, sedangkan node dengan nilai genap ditempatkan di bagian belakang tanpa mengubah urutan awal masing-masing kelompok.
 
 ## **Cara Kerja:**
 
-*
-*
+* Program menelusuri setiap node pada linked list
+* Jika nilai node ganjil, maka dimasukkan ke dalam list ganjil
+* Jika nilai node genap, maka dimasukkan ke dalam list genap
+* Setelah semua node dipisahkan, list ganjil dan genap digabungkan kembali
+* Urutan dalam masing-masing kelompok tetap dipertahankan
 
 **Contoh Input:**
 
 ```
+1 -> 2 -> 3 -> 4 -> 5
 ```
 
 **Output:**
 
 ```
+1 -> 3 -> 5 -> 2 -> 4
 ```
 
 ---
@@ -146,20 +158,25 @@ head = [1, 1, 2, 3, 3]
 ## Soal 6 - Cek Palindrom
 
 **Penjelasan:**
+Mengecek apakah linked list membentuk pola palindrom (sama dari depan dan belakang).
 
 ## **Cara Kerja:**
 
-*
-*
+* Menemukan titik tengah linked list.
+* Membalik setengah list dari titik tengah.
+* Membandingkan kedua bagian node demi node.
+* Mengembalikan hasil boolean (true/false).
 
 **Contoh Input:**
 
 ```
+head = [1, 2, 3, 2, 1]
 ```
 
 **Output:**
 
 ```
+true
 ```
 
 ---
@@ -167,20 +184,26 @@ head = [1, 1, 2, 3, 3]
 ## Soal 7 - Hapus Elemen Tertentu
 
 **Penjelasan:**
+Program ini digunakan untuk menghapus semua node pada linked list yang memiliki nilai tertentu. Setelah penghapusan, linked list akan diperbarui tanpa node yang memiliki nilai tersebut.
 
 ## **Cara Kerja:**
 
-*
-*
+* Program menelusuri linked list dari awal
+* Jika node di awal memiliki nilai yang ingin dihapus, maka node tersebut langsung dihapus dan head diperbarui
+* Selanjutnya program mengecek setiap node berikutnya
+* Jika ditemukan node dengan nilai yang sama, node tersebut akan dilewati dan dihapus dari linked list
+* Proses dilakukan hingga seluruh node selesai diperiksa
 
 **Contoh Input:**
 
 ```
+1 -> 2 -> 6 -> 3 -> 4 -> 5 -> 6
 ```
 
 **Output:**
 
 ```
+1 -> 2 -> 3 -> 4 -> 5
 ```
 
 ---
@@ -188,20 +211,24 @@ head = [1, 1, 2, 3, 3]
 ## Soal 8 - Reorder List
 
 **Penjelasan:**
+Mengubah urutan linked list dari L0 → L1 → … → Ln menjadi L0 → Ln → L1 → Ln-1 → ….
 
 ## **Cara Kerja:**
 
-*
-*
+* Temukan titik tengah linked list.
+* Balik setengah list setelah tengah.
+* Gabungkan node secara bergantian dari kedua list.
 
 **Contoh Input:**
 
 ```
+head = [1, 2, 3, 4]
 ```
 
 **Output:**
 
 ```
+[1, 4, 2, 3]
 ```
 
 ---
@@ -209,20 +236,24 @@ head = [1, 1, 2, 3, 3]
 ## Soal 9 - Reverse Sebagian
 
 **Penjelasan:**
+Membalik urutan node dari posisi m ke n dalam linked list.
 
 ## **Cara Kerja:**
 
-*
-*
+* Temukan node sebelum posisi m.
+* Balik sublist dari posisi m sampai n.
+* Sambungkan sublist yang dibalik ke bagian list sebelum dan sesudahnya.
 
 **Contoh Input:**
 
 ```
+head = [1, 2, 3, 4, 5], m = 2, n = 4
 ```
 
 **Output:**
 
 ```
+[1, 4, 3, 2, 5]
 ```
 
 ---
@@ -230,20 +261,23 @@ head = [1, 1, 2, 3, 3]
 ## Soal 10 - Hapus Berdasarkan Array
 
 **Penjelasan:**
+Menghapus node-node yang nilainya terdapat dalam array referensi.
 
 ## **Cara Kerja:**
 
-*
-*
+* Membuat set atau array boolean untuk memeriksa nilai yang harus dihapus.
+* Menelusuri linked list dan hapus node jika nilainya ada dalam array referensi.
 
 **Contoh Input:**
 
 ```
+head = [1, 2, 3, 4, 5], arr = [2, 4]
 ```
 
 **Output:**
 
 ```
+[1, 3, 5]
 ```
 
 ---
