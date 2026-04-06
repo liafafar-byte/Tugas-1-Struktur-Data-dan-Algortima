@@ -23,7 +23,6 @@ struct Node* partisiList(struct Node* head, int x) {
 
 // ================= SOAL 3 =================
 struct Node* hapusDuplikasi(struct Node* head) {
-    // \\ CONTOH SUDAH DIISI (biar jadi acuan)
 
     struct Node* curr = head;
 
@@ -42,7 +41,6 @@ struct Node* hapusDuplikasi(struct Node* head) {
 
 // ================= SOAL 4 =================
 struct Node* hapusDariAkhir(struct Node* head, int n) {
-    // \\ CONTOH SUDAH DIISI
 
     struct Node* fast = head;
     struct Node* slow = head;
@@ -79,9 +77,31 @@ struct Node* ganjilGenapList(struct Node* head) {
 
 // ================= SOAL 6 =================
 int apaPalindrom(struct Node* head) {
-    // \\ ISI LOGIKA SOAL 6 DI SINI
+int apaPalindrom(struct Node* head) {
+    // simpan nilai ke array dulu
+    int arr[1000]; // cukup aman untuk batas soal
+    int i = 0;
 
-    return 0;
+    struct Node* curr = head;
+
+    while (curr != NULL) {
+        arr[i++] = curr->nilai;
+        curr = curr->next;
+    }
+
+    // cek dari depan dan belakang
+    int kiri = 0;
+    int kanan = i - 1;
+
+    while (kiri < kanan) {
+        if (arr[kiri] != arr[kanan]) {
+            return 0; // bukan palindrom
+        }
+        kiri++;
+        kanan--;
+    }
+
+    return 1; // palindrom
 }
 
 // ================= SOAL 7 =================
@@ -93,7 +113,45 @@ struct Node* hapusElemen(struct Node* head, int x) {
 
 // ================= SOAL 8 =================
 void reorderList(struct Node* head) {
-    // \\ ISI LOGIKA SOAL 8 DI SINI
+    if (head == NULL || head->next == NULL) return;
+
+    // 1. cari tengah (slow-fast)
+    struct Node* slow = head;
+    struct Node* fast = head;
+
+    while (fast->next != NULL && fast->next->next != NULL) {
+        slow = slow->next;
+        fast = fast->next->next;
+    }
+
+    // 2. balik setengah kedua
+    struct Node* prev = NULL;
+    struct Node* curr = slow->next;
+    struct Node* next = NULL;
+
+    slow->next = NULL; // putus list
+
+    while (curr != NULL) {
+        next = curr->next;
+        curr->next = prev;
+        prev = curr;
+        curr = next;
+    }
+
+    // 3. gabung selang-seling
+    struct Node* first = head;
+    struct Node* second = prev;
+
+    while (second != NULL) {
+        struct Node* temp1 = first->next;
+        struct Node* temp2 = second->next;
+
+        first->next = second;
+        second->next = temp1;
+
+        first = temp1;
+        second = temp2;
+    }
 }
 
 // ================= SOAL 9 =================
